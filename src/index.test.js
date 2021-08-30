@@ -2,13 +2,14 @@ jest.mock("fs", () => ({
   promises: {
     stat: jest.fn(),
     unlink: jest.fn(),
+    rmdir: jest.fn(),
   },
 }));
 jest.mock("./utils", () => ({
   ...jest.requireActual("./utils"),
   getDirFilenames: jest.fn(),
 }));
-const { stat, unlink } = require("fs").promises;
+const { stat, unlink, rmdir } = require("fs").promises;
 const { onPreBuild, onPostBuild } = require("./index");
 const { getDirFilenames } = require("./utils");
 
@@ -143,6 +144,19 @@ describe("on onPostBuild", () => {
       await onPostBuild({ inputs, utils });
       expect(utils.cache.save).toBeCalledTimes(1);
       expect(utils.cache.save).toBeCalledWith(inputs.path);
+    });
+
+    it("removes old cache directory", async () => {
+      await onPostBuild({ inputs, utils });
+      expect(rmdir).toBeCalledTimes(1);
+      expect(rmdir.mock.calls[0]).toMatchInlineSnapshot(`
+Array [
+  ".netlify-plugin-ttl-cache",
+  Object {
+    "recursive": true,
+  },
+]
+`);
     });
   });
 });

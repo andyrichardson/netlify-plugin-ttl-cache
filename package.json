@@ -1,6 +1,6 @@
 {
   "name": "netlify-plugin-ttl-cache",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A Netlify plugin for persisting immutable build assets across releases.",
   "keywords": [
     "netlify",
