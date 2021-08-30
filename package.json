@@ -1,7 +1,13 @@
 {
   "name": "netlify-plugin-ttl-cache",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "A Netlify plugin for persisting immutable build assets across releases.",
+  "keywords": [
+    "netlify",
+    "netlify-plugin",
+    "cache",
+    "ttl"
+  ],
   "author": "Andy Richardson (andyrichardson)",
   "license": "MIT",
   "repository": {
@@ -12,7 +18,7 @@
     "url": "https://github.com/andyrichardson/netlify-plugin-ttl-cache/issues"
   },
   "homepage": "https://github.com/andyrichardson/netlify-plugin-ttl-cache#readme",
-  "main": "index.js",
+  "main": "src/index.js",
   "files": [
     "src/index.js",
     "src/utils.js",
