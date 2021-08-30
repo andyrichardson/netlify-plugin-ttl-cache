@@ -1,0 +1,11 @@
+name: netlify-plugin-ttl-cache
+inputs:
+  - name: path
+    description: Path of build output
+    default: "build"
+  - name: ttl
+    description: Number of days to keep old assets
+    default: 90
+  - name: exclude
+    description: Regex of assets to exclude
+    default: "a^"

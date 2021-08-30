@@ -1,0 +1,28 @@
+{
+  "name": "netlify-plugin-ttl-cache",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Andy Richardson (andyrichardson)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andyrichardson/netlify-plugin-ttl-cache.git"
+  },
+  "bugs": {
+    "url": "https://github.com/andyrichardson/netlify-plugin-ttl-cache/issues"
+  },
+  "homepage": "https://github.com/andyrichardson/netlify-plugin-ttl-cache#readme",
+  "main": "index.js",
+  "files": [
+    "src/index.js",
+    "src/utils.js",
+    "manifest.yml"
+  ],
+  "sideEffects": "false",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^27.1.0"
+  }
+}
