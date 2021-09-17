@@ -36,7 +36,7 @@ _Build output directory._
 
 **type:** `string`
 
-**default:** `"build"`
+**default:** The "Publish directory" provided in the Build settings of your Netlify Deployment 
 
 ### ttl
 

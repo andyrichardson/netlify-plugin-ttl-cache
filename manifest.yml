@@ -1,8 +1,7 @@
 name: netlify-plugin-ttl-cache
 inputs:
   - name: path
-    description: Path of build output
-    default: "build"
+    description: Path of build output, defaults to using the publish directory defined in the Build settings of Netlify
   - name: ttl
     description: Number of days to keep old assets
     default: 90
